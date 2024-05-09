@@ -1,0 +1,9 @@
+TUGAS BU AMALIA
+
+Buat Project PHP sesuai tema masing-masing kelompok.
+Kriteria tugas:
+• buat PHP insert, select, update, dan delete minimal 3 tabel, 1 orang membuat 1 tabel.
+• tampilan minimal seperti pada modul, jika mau dibuat tampilan lebih bagus lagi boleh.
+• project kolaborasi dengan github, progress individu saya cek pada github.
+• upload screenshot database pada github, cara screenshot: buka pgAdmin, klik kanan pada "nama database", klik "ERD for Database", lalu screenshot
+• Link github project dikumpulkan pada google classroom.
