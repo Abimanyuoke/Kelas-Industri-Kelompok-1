@@ -24,8 +24,8 @@
         </select>
         Tarif: 
          <select name="tarif" class="form-control">
-             <option  value="15.000 - 30.000">15.000 - 30.000</option>
-             <option value="25.000 - 40.000">25.000 - 40.000</option>
+             <option  value="15.000 - 30.000">REGULER</option>
+             <option value="25.000 - 40.000">EXPRESS</option>
          </select>
         ID_user :
         <select name="id_user" class="form-control">

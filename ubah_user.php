@@ -17,6 +17,8 @@ id_barang = '".$_GET['id_barang']."'");
   "<?=$dt_barang['id_barang']?>">
    Nama Barang :
   <input type="text" name="nama_barang" value=   "<?=$dt_barang['nama_barang']?>" class="form-control">
+  Tenggal Pembelian :
+  <input type="date" name="tanggal_pengiriaman" value=   "<?=$dt_barang['nama_barang']?>" class="form-control">
   Alamat :
   <input type="text" name="alamat" value=   "<?=$dt_barang['alamat']?>" class="form-control">
   Username :
@@ -24,28 +26,39 @@ id_barang = '".$_GET['id_barang']."'");
   Password : 
   <input type="password" name="password" value="" class="form-control">
   Jenis Pengiriman : 
-  <input type="text" name="jenis_pengiriman" value="<?=$dt_barang['jenis_pengiriman']?>" class="form-control">
-  Gender : 
         <?php 
-        $arr_gender=array('L'=>'Laki-laki','P'=>'Perempuan');
+        $arr_jenis_pengiriman=array('REGULER'=>'REGULER','EXPRESS'=>'EXPRESS');
         ?>
-        <select name="gender" class="form-control">
-            <option></option>
-            <?php foreach ($arr_gender as $key_gender => $val_gender):
-                if($key_gender==$dt_siswa['gender']){
+        <select name="jenis_pengiriman" class="form-control">
+            <?php foreach ($arr_jenis_pengiriman as $key_jenis_pengiriman => $val_jenis_pengiriman):
+                if($key_jenis_pengiriman==$dt_barang['jenis_pengiriman']){
                     $selek="selected";
                 } else {
                     $selek="";
                 }
              ?>
-<option value="<?=$key_gender?>" <?=$selek?>><?=$val_gender?></option>
+                <option value="<?=$key_jenis_pengiriman?>" <?=$selek?>><?=$val_jenis_pengiriman
+        ?></option>
             <?php endforeach ?>
         </select>
-        Alamat : 
-<textarea name="alamat" class="form-control" rows="4"><?=$dt_siswa['alamat']?></textarea>
+     Tarif : 
+        <?php 
+        $arr_tarif=array('15.000 - 30.000'=>'REGULER','25.000 - 40.000'=>'EXPRESS');
+        ?>
+        <select name="tarif" class="form-control">
+            <?php foreach ($arr_tarif as $key_tarif => $val_tarif):
+                if($key_tarif==$dt_barang['tarif']){
+                    $selek="selected";
+                } else {
+                    $selek="";
+                }
+             ?>
+<option value="<?=$key_tarif?>" <?=$selek?>><?=$val_tarif
+?></option>
+            <?php endforeach ?>
+        </select>
         Kelas :
-        <select name="id_kelas" class="form-control">
-            <option></option>
+        <select name="id_user" class="form-control">
             <?php 
             include "koneksi.php";
             $qry_kelas=mysqli_query($conn,"select * from kelas");
