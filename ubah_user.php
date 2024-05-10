@@ -57,26 +57,22 @@ id_barang = '".$_GET['id_barang']."'");
 ?></option>
             <?php endforeach ?>
         </select>
-        Kelas :
+        ID_user :
         <select name="id_user" class="form-control">
             <?php 
             include "koneksi.php";
-            $qry_kelas=mysqli_query($conn,"select * from kelas");
-            while($data_kelas=mysqli_fetch_array($qry_kelas)){
-                if($data_kelas['id_kelas']==$dt_siswa['id_kelas']){
+            $qry_barang= pg_query($conn,"select * from pelanggan");
+            while($data_pelanggan = pg_fetch_array ($qry_barang)){
+                if($data_pelanggan['id_user']==$dt_barang['id_barang']){
                     $selek="selected";
                 } else {
                     $selek="";
                 }
-echo '<option value="'.$data_kelas['id_kelas'].'" '.$selek.'>'.$data_kelas['nama_kelas'].'</option>';   
+echo '<option value="'.$data_pelanggan['id_kelas'].'" '.$selek.'>'.$data_pelanggan['nama_kelas'].'</option>';   
             }
             ?>
         </select>
-        Username : 
-<input type="text" name="username" value="<?=$dt_siswa['username']?>" class="form-control">
 <input type="submit" name="simpan" value="Ubah Siswa" class="btn btn-primary">
     </form>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
