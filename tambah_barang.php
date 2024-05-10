@@ -20,12 +20,14 @@
         Jenis Pengiriman : 
         <select name="jenis_pengiriman" class="form-control">
             <option value="REGULER">REGULER</option>
+            <option value="REGULER">HEMAT</option>
             <option value="EXPRESS">EXPRESS</option>
         </select>
         Tarif: 
          <select name="tarif" class="form-control">
-             <option  value="15.000 - 30.000">REGULER</option>
-             <option value="25.000 - 40.000">EXPRESS</option>
+             <option  value="25000">REGULER</option>
+             <option  value="15000">HEMAT</option>
+             <option value="40000">EXPRESS</option>
          </select>
         ID_user :
         <select name="id_user" class="form-control">
