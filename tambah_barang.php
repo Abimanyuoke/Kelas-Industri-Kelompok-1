@@ -2,11 +2,16 @@
 <html>
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title></title>
+    <title>Tambah Barang</title>
+    <style>
+        input {
+            padding-bottom: 25px;
+        }
+    </style>
 </head>
 <body>
-    <h3>Tambah Barang</h3>
-    <form action="proses_tambah_barang.php" method="post">
+    <h3 style="text-align: center; font-size: 2.5rem; font-weight: bold; padding-bottom: 20px; padding-top: 20px">Tambah Barang</h3>
+    <form action="proses_tambah_barang.php" method="post" style="padding-left: 20px;">
         Nama Barang : 
         <input name="nama_barang" class="form-control"></input>
         Tanggal Pembelian : 
